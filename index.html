@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Four Cards Layout</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather"
+    />
+  </head>
+  <body>
+    <div class="title">
+      <span> Like this? You’ll love these</span>
+    </div>
+
+    <!-- Trigger/Open The Modal -->
+    <!-- <button id="myBtn">Open Modal</button> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <span>HOLISTIC HAIR </span>
+        </div>
+        <div>
+          <span>Sensitive Conditioner </span>
+        </div>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'overview')">
+            overview
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'description')">
+            description
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'newtab')">
+            open in new tab
+          </button>
+        </div>
+
+        <div id="overview" class="tabcontent">
+          <div class="overview-card">
+            <div class="images">
+              <div class="left-images">
+                <div>
+                  <img
+                    src="./assests/sensitive-conditioner-modal-image1.svg"
+                    alt="conditioner"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./assests/sensitive-conditioner-modal-image2.svg"
+                    alt="conditioner2"
+                  />
+                </div>
+              </div>
+              <div class="right-images">
+                <div>
+                  <img
+                    src="./assests/sensitive-conditioner.svg"
+                    alt="conditioner2"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-three-section-3">
+                <div class="rrp-text">
+                  <span class="rrp">RRP : </span>
+                </div>
+                <div class="rrp-text">
+                  <span class="rrp">NZ$31.99</span>
+                </div>
+              </div>
+              <div class="card-three-section-3">
+                <div class="rrp-text">
+                  <span class="rrp">Our Price : </span>
+                </div>
+                <div class="rrp-text">
+                  <span class="rrp">NZ$30.70</span>
+                </div>
+              </div>
+              <div class="card-three-section-3">
+                <div class="sale-text">
+                  <span class="sale">SALE</span>
+                </div>
+                <div class="price-text">
+                  <span class="price">NZ$23.90</span>
+                </div>
+              </div>
+              <div class="card-three-section-3">
+                <div class="save-text">
+                  <span class="save">You Save</span>
+                </div>
+                <div class="save-text">
+                  <span class="save">NZ$08.09(25%)</span>
+                </div>
+              </div>
+              <div class="card-content-button">
+                <button class="button-card2" role="button">
+                  <span class="add-to-cart-text">UPDATE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="description" class="tabcontent"></div>
+
+        <div id="newtab" class="tabcontent"></div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card" id="myBtn">
+        <div class="image-wrapper">
+          <div class="left-side-image-wrapper">
+            <img src="./assests/bonus.svg" alt="bonus" />
+            <img src="./assests/new.svg" alt="new" />
+          </div>
+          <div>
+            <img src="./assests/sensitive-conditioner.svg" alt="conditioner" />
+          </div>
+          <div class="right-side-image-wrapper">
+            <label class="container">
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <div class="mindful">
+              <img src="./assests/mindful-brand.svg" alt="mindful" />
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-content-first">
+            <div class="text">
+              <span class="description">500m, 250ml</span>
+            </div>
+            <div class="rate">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text">1 star</label>
+            </div>
+          </div>
+
+          <div class="card-content-second">
+            <span class="card-content-second-text1">This Item :</span>
+            <span class="card-content-second-text2">Holistic Hair</span>
+          </div>
+          <div>
+            <span class="card-content-second-text3">Sensitive Conditioner</span>
+          </div>
+          <div class="card-content-text4">
+            <select name="items" id="items">
+              <option value="250">250ML, NZ$23.90</option>
+              <option value="500">5000ML, NZ$23.90</option>
+            </select>
+          </div>
+          <div class="card-content-button">
+            <button class="button-card1" role="button">
+              <span class="add-to-cart-text">ADDED TO CART</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="plus">
+        <span>+</span>
+      </div>
+      <div class="card">
+        <div class="image-wrapper">
+          <div class="left-side-image-wrapper">
+            <img src="./assests/new.svg" alt="new" />
+          </div>
+          <div>
+            <img src="./assests/sensitive-shampoo.svg" alt="shampoo" />
+          </div>
+          <div class="right-side-image-wrapper">
+            <label class="container">
+              <input type="checkbox" unchecked />
+              <span class="checkmark"></span>
+            </label>
+            <div class="mindful">
+              <img src="./assests/mindful-brand.svg" alt="mindful" />
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-content-first">
+            <div class="text">
+              <span class="description">500m, 250ml</span>
+            </div>
+            <div class="rate">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text">1 star</label>
+            </div>
+          </div>
+
+          <div class="card-content-second">
+            <span class="card-content-second-text2">Holistic Hair</span>
+          </div>
+          <div>
+            <span class="card-content-second-text3">Sensitive Shampoo</span>
+          </div>
+          <div class="card-content-text4">
+            <select name="items" id="items">
+              <option value="null">Please Select</option>
+              <option value="250">250ML, NZ$23.90</option>
+              <option value="500">5000ML, NZ$23.90</option>
+            </select>
+          </div>
+          <div class="card-content-button">
+            <button class="button-card2" role="button">
+              <span class="add-to-cart-text">ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-wrapper">
+          <div>
+            <img src="./assests/natural-hold.svg" alt="clay" />
+          </div>
+          <div class="right-side-image-wrapper">
+            <label class="container">
+              <input type="checkbox" unchecked />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-content-first">
+            <div class="text">
+              <span class="description">65 gm</span>
+            </div>
+            <div class="rate">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text">1 star</label>
+            </div>
+          </div>
+
+          <div class="card-content-second">
+            <span class="card-content-second-text2">AOTEAROAD</span>
+          </div>
+          <div>
+            <span class="card-content-second-text3"
+              >Natural Hold Hair Clay</span
+            >
+          </div>
+          <div class="card-three-section-3">
+            <div class="sale-text">
+              <span class="sale">SALE</span>
+            </div>
+            <div class="rrp-text">
+              <span class="rrp">RRP NZ$31.99</span>
+            </div>
+          </div>
+          <div class="card-three-section-3">
+            <div class="price-text">
+              <span class="price">NZ$12.90</span>
+            </div>
+            <div class="save-text">
+              <span class="save">Save(15%)</span>
+            </div>
+          </div>
+          <div class="card-content-button">
+            <button class="button-card2" role="button">
+              <span class="add-to-cart-text">ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-four">
+        <div class="card-four-text">
+          <span>Bundle Total :</span>
+          <span>NZ$35.90</span>
+        </div>
+        <div class="card-four-button--container">
+          <button class="card-four-button" role="button">
+            MAKE THEM YOURS
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

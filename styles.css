@@ -1,0 +1,431 @@
+body {
+  font-family: "Merriweather";
+  background-color: #f4f4f4;
+}
+.title {
+  display: block;
+  font-family: "Merriweather";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  width: 282px;
+  height: 489px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-content-first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.description {
+  font-family: "Merriweather";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.checked {
+  color: orange;
+}
+
+.image-wrapper {
+  position: relative;
+  border-bottom: 2px solid black;
+}
+.left-side-image-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.left-side-image-wrapper > img {
+  margin-bottom: 20px;
+}
+
+.right-side-image-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mindful {
+  margin-top: 32px;
+}
+
+.rate {
+  height: 36px;
+  padding: 0 10px;
+  align-items: start;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: left;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  height: 27px;
+  width: 27px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #22686c;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.card-content-second {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 8px;
+}
+
+.card-content-second-text1 {
+  font-family: "Merriweather";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  color: #22686c;
+}
+.card-content-second-text2 {
+  font-family: "Merriweather";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  /* margin-left: 8px; */
+}
+.card-content-second-text3 {
+  font-family: "Merriweather";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.25px;
+  text-align: left;
+}
+
+.card-content-button {
+  margin-top: 12px;
+}
+.add-to-cart-text {
+  color: white;
+}
+
+/* CSS */
+.button-card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Merriweather";
+  min-width: 280px;
+  height: 44px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #59595b;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5),
+    0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #dfdedf;
+}
+
+.button-card1:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2),
+    0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+/* CSS */
+.button-card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Merriweather";
+  min-width: 280px;
+  height: 44px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #2ea37b;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5),
+    0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #dfdedf;
+}
+
+.button-card2:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2),
+    0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+.card-content-text4 {
+  min-width: 250px;
+  margin-top: 12px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.plus {
+  color: #22686c;
+  font-size: 32px;
+}
+
+.card-three-section-3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.sale-text {
+  width: 53px;
+  height: 21px;
+  border-radius: 10px;
+  background: #eb9e32;
+  text-align: center;
+}
+.sale {
+  font-family: "Merriweather";
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 13px;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+.price-text {
+  font-family: "Merriweather";
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 19px;
+  letter-spacing: 0.5;
+  color: #eb9e32;
+}
+.rrp-text {
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.800000011920929px;
+  text-align: left;
+  color: #101820;
+}
+.save-text {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.800000011920929px;
+  text-align: left;
+  color: #969696;
+}
+.card-four {
+  width: 282px;
+  height: 489px;
+  gap: 8px;
+  padding: 20px;
+  background-color: #22686c;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.card-four-button {
+  display: flex;
+  flex-direction: column;
+  font-family: "Merriweather";
+  min-width: 100%;
+  padding: 16px;
+  border-radius: 6px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5),
+    0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #22686c;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  align-items: center;
+}
+
+.card-four-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  height: 84%;
+}
+.card-four-text > span {
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tabcontent {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.overview-card {
+  width: 300px;
+  height: 489px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
